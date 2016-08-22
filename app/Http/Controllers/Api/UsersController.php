@@ -36,6 +36,7 @@ class UsersController extends ApiController
             return $this->response->error('Something went wrong');
         }
         return $this->response->item($user, new UserTransformer());
+
     }
 
 
