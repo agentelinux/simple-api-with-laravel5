@@ -182,8 +182,10 @@ return [
     |
     */
 
-    'throttling' => [
+    //https://github.com/dingo/api/wiki/Rate-Limiting
 
+    'throttling' => [
+       // 'custom' => new App\Http\Middleware\CustomThrottle(['limit' => 200, 'expires' => 10])
     ],
 
     /*
