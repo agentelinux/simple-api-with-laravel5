@@ -29,7 +29,7 @@ $api->version('v1', function ($api) {
     /*
      * Protected API route with JWT (must be logged in) throttle:60,1
      */
-    $api->group(['middleware' => 'api.throttle', 'limit' => 100, 'expires' => 5], function ($api) {
+    $api->group(['middleware' => 'api.throttle', 'plan1'], function ($api) {
 
         $api->get('authenticated', 'App\Http\Controllers\Api\UsersController@authenticated');
 

@@ -2,14 +2,31 @@
 
 namespace App\Http\Middleware;
 
+
 use Illuminate\Container\Container;
+
 use Dingo\Api\Http\RateLimit\Throttle\Throttle;
 
 class CustomThrottle extends Throttle
+
 {
-    public function match(Container $app)
+
+    protected $enabled;
+
+    public function __construct(array $options = ['limit' => 131, 'expires' => 60], $enabled = true)
+
     {
-        // Perform some logic here and return either true or false depending on whether
-        // your conditions matched for the throttle.
+
+        $this->enabled = $enabled;
+        parent::__construct($options);
+
     }
+
+    public function match(Container $app)
+
+    {
+        return $this->enabled;
+
+    }
+
 }
