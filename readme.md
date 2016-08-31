@@ -13,6 +13,10 @@ Simple demo of a Laravel API, using Dingo and JWT for authentication.
 
 ----------
 
+## Pre-Install
+```
+brew install php56-memcached
+```
 
 ## Installation
 
