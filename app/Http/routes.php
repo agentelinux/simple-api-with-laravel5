@@ -14,6 +14,18 @@
 
 $api = app('Dingo\Api\Routing\Router');
 
+// Add this route for checkout or submit form to pass the item into paypal
+Route::get('payment', array(
+    'as' => 'payment',
+    'uses' => 'PaypalController@createPayment',
+));
+// this is after make the payment, PayPal redirect back to your site
+Route::get('payment/success', array(
+    'as' => 'payment.status',
+    'uses' => 'PaypalController@getPaymentStatus',
+));
+
+
 $api->version('v1', function ($api) {
 
 

@@ -1,3 +1,4 @@
+/config/paypal.php
 /vendor
 /node_modules
 /public/storage

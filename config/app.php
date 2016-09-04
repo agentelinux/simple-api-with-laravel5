@@ -177,6 +177,8 @@ return [
         
         // Laravel Cors
         Barryvdh\Cors\ServiceProvider::class,
+
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
     ],
 
     /*
@@ -225,7 +227,8 @@ return [
 
         // JWT
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
-        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class
 
     ],
 
